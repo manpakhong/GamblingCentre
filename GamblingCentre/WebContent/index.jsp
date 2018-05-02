@@ -46,5 +46,11 @@
 		sample query string:<br />
 		http://localhost:8080/MfmsReports/rest/generatePatrolReportWs/requestInspectionExcel?siteKey=5<br />			
 	</p>
+	    <form action="rest/gamblingWs/upload" method="post" enctype="multipart/form-data">
+     
+            <p>Select a file : <input type="file" name="file" size="45" accept=".pdf" /></p>
+            <input type="submit" value="Upload PDF" />
+             
+        </form>
 </body>
 </html>
