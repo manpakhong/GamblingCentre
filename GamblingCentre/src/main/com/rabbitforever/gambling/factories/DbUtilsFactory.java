@@ -4,6 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.rabbitforever.gambling.utils.DbUtils;
+import com.rabbitforever.gambling.utils.HibernateUtils;
 import com.rabbitforever.gambling.utils.MySqlDbUtils;
 public class DbUtilsFactory {
 	private final static Logger logger = LoggerFactory.getLogger(getClassName());
@@ -12,6 +13,7 @@ public class DbUtilsFactory {
 	private static DbUtilsFactory dbUtilsFactory;
 //	private static DbUtils db2DbUtils;
 //	private static DbUtils msSqlDbUtils;
+	private static HibernateUtils hibernateUtils;
 	
 	private DbUtilsFactory(){
 		
@@ -36,6 +38,17 @@ public class DbUtilsFactory {
 	public static String getClassName() {
 		String className = DbUtilsFactory.class.getName();
 		return className;
+	}
+	public static HibernateUtils getInstanceOfHibernateUtils() throws Exception{
+		try {
+			if (hibernateUtils == null){
+				hibernateUtils = new HibernateUtils();
+			}
+		} catch (Exception e) {
+			logger.error(getClassName() + ".getInstanceOfHibernateUtils()", e);
+			throw e;
+		}
+		return hibernateUtils;
 	}
 //	public static DbUtils getInstanceOfDb2DbUtils() throws Exception{
 //		if (db2DbUtils == null){
