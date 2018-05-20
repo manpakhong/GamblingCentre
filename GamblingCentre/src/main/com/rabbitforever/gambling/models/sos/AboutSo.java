@@ -6,6 +6,13 @@ import com.rabbitforever.gambling.models.eos.AboutEo;
 
 public class AboutSo extends AboutEo implements So
 {
+	public AboutSo() {
+		
+	}
+	public AboutSo(Integer id, String name, String version, String createDate, String updateDate, String createdBy,
+			String updatedBy, String remarks) {
+		super(id, name, version, createDate, updateDate, createdBy, updatedBy, remarks);
+	}
 	protected Date createDateTimeFrom;
 	protected Date createDateTimeTo;
 	protected Date lastModifyDateTimeFrom;
