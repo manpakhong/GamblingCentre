@@ -5,6 +5,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/properties"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/resources"/>
         <property name="context-root" value="GamblingCentre"/>
         <property name="java-output-path" value="/GamblingCentre/build/classes"/>
     </wb-module>
