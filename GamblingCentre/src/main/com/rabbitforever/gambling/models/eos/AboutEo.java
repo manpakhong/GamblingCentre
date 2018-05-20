@@ -1,8 +1,11 @@
 package com.rabbitforever.gambling.models.eos;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.Table;
+@Entity
+@Table(name = "gbl_about")
 public class AboutEo {
 	protected Integer id;
 	protected String name;
