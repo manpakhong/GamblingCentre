@@ -41,6 +41,19 @@ public class GamblingWs {
 		return returnString;
 	}
 	
+	@GET
+	@Path("/")
+	@Produces("text/plain")
+	public String getAbout(){ 
+		String returnString = "";
+		try{
+			returnString = "Test return from Gambling Test()";
+		}catch (Exception e){
+			logger.error(getClassName() + ".test() - Exception: ", e);
+		}
+		return returnString;
+	}
+	
 	@POST
 	@Path("/upload")
 	@Consumes({MediaType.MULTIPART_FORM_DATA})
