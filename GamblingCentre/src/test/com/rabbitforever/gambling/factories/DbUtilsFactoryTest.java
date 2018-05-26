@@ -64,7 +64,7 @@ public class DbUtilsFactoryTest {
 				hibernateUtils = null;
 			}
 		}
-	}
+	} 
 	@Test
 	public void testCriteria() {
 		HibernateUtils hibernateUtils = null;
