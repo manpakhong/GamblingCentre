@@ -9,9 +9,9 @@ import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -70,25 +70,34 @@ public class DbUtilsFactoryTest {
 		HibernateUtils hibernateUtils = null;
 		SessionFactory sessionFactory = null;
 		Session session = null;
+		CriteriaBuilder builder = null;
+		CriteriaQuery<AboutEo> query = null;
+		Transaction trans = null;
+		Root<AboutEo> root = null;
+		Query<AboutEo> q = null;
+		List<AboutEo> aboutEoList = null;
 		try {
 			hibernateUtils = DbUtilsFactory.getInstanceOfHibernateUtils();
 			sessionFactory = hibernateUtils.getSessionFactory();
 			session = sessionFactory.getCurrentSession();
-			session.getTransaction().begin();
-			CriteriaBuilder builder = session.getCriteriaBuilder();
-			CriteriaQuery<AboutEo> query = builder.createQuery(AboutEo.class);
-			Root<AboutEo> root = query.from(AboutEo.class);
-			query.select(root).where(builder.equal(root.get("id"), 1));
-			Query<AboutEo> q = session.createQuery(query);
-			List<AboutEo> aboutEoList = q.getResultList();
+			trans = session.getTransaction();
+			trans.begin();
+			builder = session.getCriteriaBuilder();
+			query = builder.createQuery(AboutEo.class);
+			root = query.from(AboutEo.class);
+			Predicate predicate = builder.equal(root.get("id"), 1);
+			query.select(root).where(predicate);
+			q = session.createQuery(query);
+			aboutEoList = q.getResultList();
 			for (AboutEo aboutEo: aboutEoList) {
 				System.out.println(aboutEo.getName());
 			}
-			session.getTransaction().commit();
+			trans.commit();
 			session.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 			fail("Exception");
+			trans.rollback();
 		} finally {
 			if(hibernateUtils != null) {
 				hibernateUtils = null;
