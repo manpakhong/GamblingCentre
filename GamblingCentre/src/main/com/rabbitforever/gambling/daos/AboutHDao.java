@@ -1,5 +1,6 @@
 package com.rabbitforever.gambling.daos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.criteria.CriteriaBuilder;
@@ -13,6 +14,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.rabbitforever.gambling.models.eos.AboutEo;
+import com.rabbitforever.gambling.models.sos.AboutSo;
 
 public class AboutHDao extends DaoBase<AboutEo> {
 	private final Logger logger = LoggerFactory.getLogger(getClassName());
@@ -30,14 +32,34 @@ public class AboutHDao extends DaoBase<AboutEo> {
 		Transaction trans = null;
 		Root<AboutEo> root = null;
 		Query<AboutEo> q = null;
+		List<Predicate> predicateList = null;
 		try{
+			AboutSo aboutSo = (AboutSo) so;
 			trans = session.getTransaction();
 			trans.begin();
 			builder = session.getCriteriaBuilder();
 			query = builder.createQuery(AboutEo.class);
 			root = query.from(AboutEo.class);
-			Predicate predicate = builder.equal(root.get("id"), 1);
-			query.select(root).where(predicate);
+
+			if(aboutSo.getId() != null) {
+				if (predicateList == null) {
+					predicateList = new ArrayList<Predicate>();
+				}
+				Predicate predicate = builder.equal(root.get("id"), aboutSo.getId());
+				predicateList.add(predicate);
+			}
+			if (aboutSo.getName() != null) {
+				if (predicateList == null) {
+					predicateList = new ArrayList<Predicate>();
+				}
+				Predicate predicate = builder.equal(root.get("name"), aboutSo.getName());
+				predicateList.add(predicate);
+			}
+			if (predicateList != null) {
+				query.select(root).where(predicateList.toArray(new Predicate[] {}));
+			} else {
+				query.select(root);
+			}
 			q = session.createQuery(query);
 			aboutEoList = q.getResultList();
 			for (AboutEo aboutEo: aboutEoList) {
