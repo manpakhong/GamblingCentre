@@ -43,6 +43,7 @@ public class AboutHDaoTest {
 			AboutHDao dao = new AboutHDao();
 			AboutSo so = new AboutSo();
 			so.setId(1);
+			so.setName("Gambling");
 			List<AboutEo> aboutEoList = dao.read(so);
 			Assert.assertTrue(aboutEoList != null && aboutEoList.size() > 0);
 		} catch (Exception e) {

@@ -5,10 +5,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.rabbitforever.gambling.daos.AboutDao;
+import com.rabbitforever.gambling.daos.AboutHDao;
+import com.rabbitforever.gambling.daos.DaoBase;
 import com.rabbitforever.gambling.models.eos.AboutEo;
 public class AboutMgr extends ServiceBase{
 	private final Logger logger = LoggerFactory.getLogger(getClassName());
-	private AboutDao dao;
+	private DaoBase<AboutEo> dao;
+	
+	
 	private String getClassName(){
 		return this.getClass().getName();
 	}
@@ -30,7 +34,11 @@ public class AboutMgr extends ServiceBase{
 	} // end constructor
 	public void init(String connectionType) throws Exception{
 		try{
-			dao = new AboutDao(connectionType);
+			if (connectionType.equals(CONNECTION_TYPE_HIBERNATE)) {
+				dao = new AboutHDao();
+			} else {
+				dao = new AboutDao(connectionType);
+			}
 		} catch (Exception e){
 			logger.error(getClassName() + "init() - connectionType=" + connectionType, e);
 			throw e;

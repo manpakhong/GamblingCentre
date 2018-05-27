@@ -39,7 +39,7 @@ public class DbUtilsFactory {
 		String className = DbUtilsFactory.class.getName();
 		return className;
 	}
-	public static HibernateUtils getInstanceOfHibernateUtils() throws Exception{
+	public HibernateUtils getInstanceOfHibernateUtils() throws Exception{
 		try {
 			if (hibernateUtils == null){
 				hibernateUtils = new HibernateUtils();

@@ -45,8 +45,10 @@ public class DbUtilsFactoryTest {
 		HibernateUtils hibernateUtils = null;
 		SessionFactory sessionFactory = null;
 		Session session = null;
+		DbUtilsFactory dbUtilsFactory = null;
 		try {
-			hibernateUtils = DbUtilsFactory.getInstanceOfHibernateUtils();
+			dbUtilsFactory = DbUtilsFactory.getInstanceOfDbUtilsFactory();
+			hibernateUtils = dbUtilsFactory.getInstanceOfHibernateUtils();
 			sessionFactory = hibernateUtils.getSessionFactory();
 			session = sessionFactory.getCurrentSession();
 			session.getTransaction().begin();
@@ -76,8 +78,10 @@ public class DbUtilsFactoryTest {
 		Root<AboutEo> root = null;
 		Query<AboutEo> q = null;
 		List<AboutEo> aboutEoList = null;
+		DbUtilsFactory dbUtilsFactory = null;
 		try {
-			hibernateUtils = DbUtilsFactory.getInstanceOfHibernateUtils();
+			dbUtilsFactory = DbUtilsFactory.getInstanceOfDbUtilsFactory();
+			hibernateUtils = dbUtilsFactory.getInstanceOfHibernateUtils();
 			sessionFactory = hibernateUtils.getSessionFactory();
 			session = sessionFactory.getCurrentSession();
 			trans = session.getTransaction();

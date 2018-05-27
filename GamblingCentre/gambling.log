@@ -167,3 +167,53 @@ java.lang.NullPointerException
 2018-05-27 01:02:22 INFO  main org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
 2018-05-27 01:02:23 INFO  main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
 2018-05-27 01:02:26 INFO  main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-27 17:57:48 INFO  main org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+2018-05-27 17:57:48 INFO  main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-05-27 17:57:48 INFO  main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-27 17:57:48 WARN  main org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-27 17:57:49 INFO  main org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/rabbit_gamble]
+2018-05-27 17:57:49 INFO  main org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=****}
+2018-05-27 17:57:49 INFO  main org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2018-05-27 17:57:49 INFO  main org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2018-05-27 17:57:49 INFO  main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-05-27 17:57:51 INFO  main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-27 18:02:17 INFO  main org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+2018-05-27 18:02:17 INFO  main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-05-27 18:02:17 INFO  main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-27 18:02:18 WARN  main org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-27 18:02:18 INFO  main org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/rabbit_gamble]
+2018-05-27 18:02:18 INFO  main org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=****}
+2018-05-27 18:02:18 INFO  main org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2018-05-27 18:02:18 INFO  main org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2018-05-27 18:02:18 INFO  main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-05-27 18:02:20 INFO  main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-27 18:03:12 INFO  main org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+2018-05-27 18:03:12 INFO  main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-05-27 18:03:13 INFO  main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-27 18:03:13 WARN  main org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-27 18:03:13 INFO  main org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/rabbit_gamble]
+2018-05-27 18:03:13 INFO  main org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=****}
+2018-05-27 18:03:13 INFO  main org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2018-05-27 18:03:13 INFO  main org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2018-05-27 18:03:14 INFO  main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-05-27 18:03:15 INFO  main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-27 18:03:48 INFO  main org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+2018-05-27 18:03:48 INFO  main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-05-27 18:03:48 INFO  main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-27 18:03:48 WARN  main org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-27 18:03:48 INFO  main org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/rabbit_gamble]
+2018-05-27 18:03:48 INFO  main org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=****}
+2018-05-27 18:03:48 INFO  main org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2018-05-27 18:03:48 INFO  main org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2018-05-27 18:03:49 INFO  main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-05-27 18:03:51 INFO  main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2018-05-27 18:04:11 INFO  main org.hibernate.Version - HHH000412: Hibernate Core {5.2.17.Final}
+2018-05-27 18:04:11 INFO  main org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2018-05-27 18:04:12 INFO  main org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2018-05-27 18:04:12 WARN  main org.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+2018-05-27 18:04:12 INFO  main org.hibernate.orm.connections.pooling - HHH10001005: using driver [com.mysql.jdbc.Driver] at URL [jdbc:mysql://localhost:3306/rabbit_gamble]
+2018-05-27 18:04:12 INFO  main org.hibernate.orm.connections.pooling - HHH10001001: Connection properties: {user=root, password=****}
+2018-05-27 18:04:12 INFO  main org.hibernate.orm.connections.pooling - HHH10001003: Autocommit mode: false
+2018-05-27 18:04:12 INFO  main org.hibernate.engine.jdbc.connections.internal.DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 1 (min=1)
+2018-05-27 18:04:13 INFO  main org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2018-05-27 18:04:14 INFO  main org.hibernate.hql.internal.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory

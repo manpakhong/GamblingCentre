@@ -66,7 +66,7 @@ public abstract class DaoBase <T>{
 		try {
 			dbUtilsFactory = DbUtilsFactory.getInstanceOfDbUtilsFactory();
 			dbUtils = dbUtilsFactory.getInstanceOfMySqlDbUtils();
-			hibernateUtils = DbUtilsFactory.getInstanceOfHibernateUtils();
+			hibernateUtils = dbUtilsFactory.getInstanceOfHibernateUtils();
 			generalUtilsFactory = UtilsFactory.getInstance();
 			miscUtils = generalUtilsFactory.getInstanceOfMiscUtils();
 			dateUtils = generalUtilsFactory.getInstanceOfDateUtils();
