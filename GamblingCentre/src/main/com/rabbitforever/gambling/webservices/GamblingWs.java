@@ -16,6 +16,7 @@ import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
+import javax.ws.rs.core.Response.Status;
 
 import org.glassfish.jersey.media.multipart.FormDataContentDisposition;
 import org.glassfish.jersey.media.multipart.FormDataParam;
@@ -94,7 +95,7 @@ public class GamblingWs {
 			out.flush();
 			out.close();
 		} catch (IOException e) {
-			throw new WebApplicationException("Error while uploading file. Please try again !!");
+			throw new WebApplicationException(Status.NOT_ACCEPTABLE);
 		}
 		return Response.ok("Data uploaded successfully !!").build();
 	}
